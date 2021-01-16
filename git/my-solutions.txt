@@ -1,0 +1,181 @@
+MAIN
+Introduction Sequence
+
+1: Introduction to Git Commits
+git commit
+git commit
+
+2: Branching in Git
+git checkout -b bugFix
+
+3: Merging in Git
+git checkout -b bugFix
+git commit
+git checkout main
+git commit
+git merge bugFix
+
+4: Rebase Introduction
+git checkout -b bugFix
+git commit
+git checkout main
+git commit
+git checkout bugFix
+git rebase main
+
+Ramping Up
+1: Detach yo' HEAD
+git checkout c4
+
+2: Relative Refs (^)
+git checkout bugFix^
+
+3: Relative Refs #2 (~)
+git checkout c1
+git branch -f bugFix c0
+git branch -f main c6
+
+4: Reversing Changes in Git
+git reset HEAD~1
+git checkout pushed
+git revert c2
+
+Moving Work Around
+1: Cherry-pick Intro
+git cherry-pick c3 c4 c7
+
+2: Interactive Rebase Intro
+git rebase -i HEAD~4
+
+A Mixed Bag
+1: Grabbing Just 1 Commit
+git checkout main
+git cherry-pick c4
+
+2: Juggling Commits
+git rebase -i caption~2
+git commit --amend
+git rebase -i caption~2
+git branch -f main caption
+
+3: Juggling Commits #2
+git checkout main
+git cherry-pick c2
+git commit --amend
+git cherry-pick c3
+
+4: Git Tags
+git tag v0 c1
+git tag v1 c2
+git checkout c2
+
+5: Git Describe
+git describe c1  	// output: v0_1_gC1
+git describe main  	// output: v0_2_gC2
+git describe c2  	// output: v0_2_gC2
+git describe side 	// output: v1_1_gC4
+git describe bugFix	// output: v1_2_gC6
+git describe c3		// output: v1
+git commit
+
+Advanced Topics
+1: Rebasing over 9000 times
+git rebase main bugFix
+git rebase bugFix side
+git rebase side another
+git rebase another main
+
+2: Multiple parents
+git branch bugWork main~^2~
+
+3: Branch Spaghetti
+git checkout one
+git cherry-pick c4 c3 c2
+git branch -f three c2
+git checkout two
+git cherry-pick c5 c4 c3 c2
+
+REMOTE
+Push & Pull -- Git Remotes!
+1: Clone Intro
+git clone
+
+2: Remote Branches
+git commit
+git checkout o/main
+git commit
+
+3: Git Fetchin'
+git fetch
+
+4: Git Pullin'
+git pull
+
+5: Faking Teamwork
+git clone
+git fakeTeamwork 2
+git commit
+git pull
+
+6: Git Pushin'
+git commit
+git commit
+git push
+
+7: Diverged History
+git clone
+git fakeTeamwork
+git commit
+git pull --rebase
+git push
+
+8: Locked Master
+git checkout -b feature
+git push
+git branch -f main o/main
+
+To Origin And Beyond -- Advanced Git Remotes!
+1: Push Master!
+git fetch
+git rebase o/main side1
+git rebase side1 side2
+git rebase side2 side3
+git rebase side3 main
+git push
+
+2: Merging with remotes
+git fetch
+git checkout main
+git rebase o/main
+git merge side1
+git merge side2
+git merge side3
+git push
+
+3: Remote Tracking
+git checkout -b side o/main
+git commit
+git pull --rebase
+git push
+
+4: Git push arguments
+git push origin main
+git push origin foo
+
+5: Git push arguments -- Expanded!
+git push origin main~1:foo
+git push origin foo:main
+
+6: Fetch arguments
+git fetch origin main~1:foo
+git fetch origin foo:main
+git checkout foo
+git merge main
+
+7: Source of nothing
+git push origin :foo
+git fetch origin :bar
+
+8: Pull arguments
+git pull origin bar:foo
+git pull origin main:side
