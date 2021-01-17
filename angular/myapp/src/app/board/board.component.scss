@@ -2,9 +2,22 @@ main {
     display: grid;
     grid-template-columns: 200px 200px 200px;
     grid-gap: 0px;
+    margin: auto;
+    padding: 10px;
+    justify-content: center;
 }
-  
+ 
+h1, h2 {
+    text-align: center;
+}
+
+.startButton {
+    display: block;
+    margin: 0 auto;
+}
+
 app-square {
     border: 1px gray solid;
+    border-radius: 5px;
     height: 200px;
 }

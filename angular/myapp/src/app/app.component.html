@@ -1,2 +1,16 @@
-<app-board></app-board>
-<router-outlet></router-outlet>
+<nb-layout>
+
+    <nb-layout-header fixed>
+        <h1>TIC-TAC-TOE</h1>
+    </nb-layout-header>
+
+    <nb-layout-column>
+        <app-board></app-board>
+        <router-outlet></router-outlet>
+    </nb-layout-column>
+
+    <nb-layout-footer fixed>
+        <p>&#169; 2021 built using Angular</p>
+    </nb-layout-footer>
+
+</nb-layout>
