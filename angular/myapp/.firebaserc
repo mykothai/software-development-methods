@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tictactoe-3e0c8": {
+      "hosting": {
+        "myapp": [
+          "tictactoe-3e0c8"
+        ]
+      }
+    }
+  }
+}
