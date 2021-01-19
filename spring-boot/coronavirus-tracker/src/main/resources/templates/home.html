@@ -8,16 +8,14 @@
 <body>
     <div class="container">
         <h1>Coronavirus Tracker</h1>
-        <p>
-            This application lists the current total number of cases reported worldwide
-        </p>
+
         <div class="bg-light p-5 rounded-lg m-3">
-            <h1 class="display-4" th:text="${totalGlobalCases}"></h1>
+            <h1 class="display-4" th:text="${#numbers.formatDecimal(totalGlobalCases, 0, 'COMMA', 0, 'POINT')}"></h1>
             <p class="lead">Total cases reported globally as of today</p>
             <hr class="my-4">
             <p>
                 <span>Total new cases globally since previous day: </span>
-                <b><span th:text="${totalNewGlobalCases}"></span></b>
+                <b><span th:text="${#numbers.formatDecimal(totalNewGlobalCases, 0, 'COMMA', 0, 'POINT')}"></span></b>
             </p>
         </div>
 
@@ -33,10 +31,10 @@
             <tr th:each="locationStat : ${locationStats}">
                 <td th:text="${locationStat.state}"></td>
                 <td th:text="${locationStat.country}"></td>
-                <td style="text-align: center;" th:text="${locationStat.latestTotalCases}">0</td>
-                <td style="text-align: center;" th:text="${locationStat.diffFromPrevDay}">0</td>
-                <td style="text-align: center;" th:text="${locationStat.diffFromPrevMonth}">0</td>
-                <td style="text-align: center;" th:text="${locationStat.diffFromPrevYear}">0</td>
+                <td style="text-align: center;" th:text="${#numbers.formatDecimal(locationStat.latestTotalCases, 0, 'COMMA', 0, 'POINT')}">0</td>
+                <td style="text-align: center;" th:text="${#numbers.formatDecimal(locationStat.diffFromPrevDay, 0, 'COMMA', 0, 'POINT')}">0</td>
+                <td style="text-align: center;" th:text="${#numbers.formatDecimal(locationStat.diffFromPrevMonth, 0, 'COMMA', 0, 'POINT')}">0</td>
+                <td style="text-align: center;" th:text="${#numbers.formatDecimal(locationStat.diffFromPrevYear, 0, 'COMMA', 0, 'POINT')}">0</td>
             </tr>
         </table>
     </div>
