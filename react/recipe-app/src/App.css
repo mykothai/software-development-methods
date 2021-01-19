@@ -1,6 +1,6 @@
-.App {
-  min-height: 100vh;
-  background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+html, body, body > div, .App {
+    min-height: 100vh;
+    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
 }
 
 .search-form {
@@ -17,19 +17,28 @@
 }
 
 .search-button {
-    background: lightblue;
+    background: #abadad;
     border: none;
     padding: 10px 20px;
     color: white;
 }
 
-.recipies {
+.recipes {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    color: #ffffff;
+    font-size: 400%;
 }

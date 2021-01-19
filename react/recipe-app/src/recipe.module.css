@@ -1,0 +1,30 @@
+.recipe {
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px #6e6e6e;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #ffffff;
+    align-items: center;
+    min-width: 40%;
+    max-width: 40%;
+}
+
+.image {
+    float: left;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    padding-right: 100px;
+}
+
+.ul {
+    list-style-type: none;
+    padding-left: 0;
+    padding-top: 0;
+}
+
+.info {
+    width: 80%;
+}
