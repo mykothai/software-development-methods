@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Recipe Search App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+The web app is hosted on Firebase: [What2Cook](https://what2cook-3e3dd.web.app/) 
 
 ## Available Scripts
 
