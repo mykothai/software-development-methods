@@ -1,0 +1,35 @@
+.App {
+  min-height: 100vh;
+  background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+}
+
+.search-form {
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar {
+    width: 50%;
+    border: none;
+    padding: 10px;
+}
+
+.search-button {
+    background: lightblue;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+}
+
+.recipies {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
