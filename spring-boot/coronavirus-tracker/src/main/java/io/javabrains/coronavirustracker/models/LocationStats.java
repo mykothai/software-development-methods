@@ -5,6 +5,33 @@ public class LocationStats {
     private String state;
     private String country;
     private int latestTotalCases;
+    private int diffFromPrevDay;
+    private int diffFromPrevMonth;
+    private int diffFromPrevYear;
+
+    public int getDiffFromPrevMonth() {
+        return diffFromPrevMonth;
+    }
+
+    public void setDiffFromPrevMonth(int diffFromPrevMonth) {
+        this.diffFromPrevMonth = diffFromPrevMonth;
+    }
+
+    public int getDiffFromPrevYear() {
+        return diffFromPrevYear;
+    }
+
+    public void setDiffFromPrevYear(int diffFromPrevYear) {
+        this.diffFromPrevYear = diffFromPrevYear;
+    }
+
+    public int getDiffFromPrevDay() {
+        return diffFromPrevDay;
+    }
+
+    public void setDiffFromPrevDay(int diffFromPrevDay) {
+        this.diffFromPrevDay = diffFromPrevDay;
+    }
 
     public String getState() {
         return state;

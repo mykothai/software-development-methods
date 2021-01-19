@@ -3,20 +3,42 @@
 <head>
     <title>COVID-19 Tracker</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Coronavirus Tracker</h1>
-    <table>
-        <tr>
-            <th>City/State</th>
-            <th>Country</th>
-            <th>Total Reported Cases</th>
-        </tr>
-        <tr th:each="locationStat : ${locationStats}">
-            <td th:text="${locationStat.state}"></td>
-            <td th:text="${locationStat.country}"></td>
-            <td th:text="${locationStat.latestTotalCases}">0</td>
-        </tr>
-    </table>
+    <div class="container">
+        <h1>Coronavirus Tracker</h1>
+        <p>
+            This application lists the current total number of cases reported worldwide
+        </p>
+        <div class="bg-light p-5 rounded-lg m-3">
+            <h1 class="display-4" th:text="${totalGlobalCases}"></h1>
+            <p class="lead">Total cases reported globally as of today</p>
+            <hr class="my-4">
+            <p>
+                <span>Total new cases globally since previous day: </span>
+                <b><span th:text="${totalNewGlobalCases}"></span></b>
+            </p>
+        </div>
+
+        <table class="table table-striped table-hover">
+            <tr>
+                <th >City</th>
+                <th>Country</th>
+                <th>Total Reported Cases</th>
+                <th>Changes Since Last Day</th>
+                <th>Changes Since Last Month</th>
+                <th>Changes Since Last Year</th>
+            </tr>
+            <tr th:each="locationStat : ${locationStats}">
+                <td th:text="${locationStat.state}"></td>
+                <td th:text="${locationStat.country}"></td>
+                <td th:text="${locationStat.latestTotalCases}">0</td>
+                <td th:text="${locationStat.diffFromPrevDay}">0</td>
+                <td th:text="${locationStat.diffFromPrevMonth}">0</td>
+                <td th:text="${locationStat.diffFromPrevYear}">0</td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
