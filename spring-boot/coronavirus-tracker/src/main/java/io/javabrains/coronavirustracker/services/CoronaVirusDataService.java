@@ -19,7 +19,7 @@ import java.util.List;
 @Service
 public class CoronaVirusDataService {
     /**
-     * Calls URL and provides data
+     * Makes request and provides data
      */
 
     private static String VIRUS_DATA_URL = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv";
@@ -59,7 +59,6 @@ public class CoronaVirusDataService {
             locationStat.setState(record.get("Province/State"));
             locationStat.setCountry(record.get("Country/Region"));
             locationStat.setLatestTotalCases(Integer.parseInt(record.get(record.size() - 1)));
-            System.out.println(locationStat);
             statsList.add(locationStat);
         }
         this.allStats = statsList;
