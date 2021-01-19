@@ -31,7 +31,7 @@ public class CoronaVirusDataService {
     }
 
     @PostConstruct // when application starts, since this is a service, create instance of this class and execute this method
-    @Scheduled(cron = "* * 1 * * *") // run method once in the first hour of each day
+    @Scheduled(cron = "0 1 1 * * ?") // run method once in the first hour of each day
     public void fetchVirusData() throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
