@@ -33,10 +33,10 @@
             <tr th:each="locationStat : ${locationStats}">
                 <td th:text="${locationStat.state}"></td>
                 <td th:text="${locationStat.country}"></td>
-                <td th:text="${locationStat.latestTotalCases}">0</td>
-                <td th:text="${locationStat.diffFromPrevDay}">0</td>
-                <td th:text="${locationStat.diffFromPrevMonth}">0</td>
-                <td th:text="${locationStat.diffFromPrevYear}">0</td>
+                <td style="text-align: center;" th:text="${locationStat.latestTotalCases}">0</td>
+                <td style="text-align: center;" th:text="${locationStat.diffFromPrevDay}">0</td>
+                <td style="text-align: center;" th:text="${locationStat.diffFromPrevMonth}">0</td>
+                <td style="text-align: center;" th:text="${locationStat.diffFromPrevYear}">0</td>
             </tr>
         </table>
     </div>
