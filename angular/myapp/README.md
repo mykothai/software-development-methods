@@ -2,7 +2,7 @@
 
 This is a simple Tic-Tac-Toe web app hosted on Firebase.
 
-URL: [https://tictactoe-3e0c8.web.app/](https://tictactoe-3e0c8.web.app/)
+URL: [https://tictactoe-3e0c8.web.app/](https://tictactoe-3e0c8.web.app/) Note: no longer active
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
 
